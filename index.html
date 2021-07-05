@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="DIApp">
   <head>
     <meta charset="utf-8">
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
-    <title>Name Calculator</title>
+    <title>Dependency Injection</title>
   </head>
-  <body ng-app="NameCalculator">
-    <h1>Name Calculator</h1>
-    <div ng-controller="NameCalculatorController">
-      <div>
-        Your Name:
+  <body >
+    <h1>Dependency Injection</h1>
+    <div ng-controller="DIController">
       <input type="text"
             ng-model="name"
-            ng-keyup="displayNumeric();">
-      </div>
+            ng-blur="upper();">
       <div>
-        Total Numeric Value of the person's name is:
-        {{totalValue}}
+        <button ng-click="feedDhruv()">Feed Dhruv</button>
+        <br>
+        <img ng-src="{{stateOfBeing}}.jpg">
       </div>
     </div>
   </body>
