@@ -17,14 +17,18 @@ function LunchCheckController($scope,
 
     const texts=$scope.text.split(',',4);
 
-    console.log(texts[3]);
+    console.log($scope.text.trim().length);
 
+    if($scope.text.trim().length<1){
+      $scope.display="Enter food items!!";
+    }
+    else{
     if((texts[3])==(undefined)){
       $scope.display="Enjoy!";
     }
     else{
       $scope.display="Too Much!";
-    }
+    }}
 
   };
 
