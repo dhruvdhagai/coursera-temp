@@ -11,8 +11,7 @@ LunchCheckController.$inject=['$scope'];
 function LunchCheckController($scope,
                       $filter,
                       $injector){
-
-
+                        $scope.text="";
   $scope.checking= function(){
 
     const texts=$scope.text.split(',',4);
